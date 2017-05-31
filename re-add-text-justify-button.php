@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/salvatorecordiano/re-add-text-justify-button/
  * Description: The most simple plugin to re-add text justify button in the WYSIWYG on WordPress 4.7+
  * Author: Salvatore Cordiano
- * Version: 0.1.0
+ * Version: 0.1.1
  * Author URI: https://www.salvatorecordiano.it/
  */
 
@@ -13,11 +13,11 @@ function parallel_admin_head()
     add_filter('mce_buttons', 'parallel_mce_buttons', 5);
 }
 
-function parallel_mce_buttons( $buttons )
+function parallel_mce_buttons($buttons)
 {
-    $position = array_search('alignleft', $buttons);
+    $position = array_search('alignright', $buttons);
 
-    if(!is_int($position)) {
+    if (! is_int($position)) {
 
         return array_merge($buttons, ['alignjustify']);
     }
@@ -29,4 +29,4 @@ function parallel_mce_buttons( $buttons )
     );
 }
 
-add_action( 'admin_head', 'parallel_admin_head', 5 );
+add_action('admin_head', 'parallel_admin_head', 5);
