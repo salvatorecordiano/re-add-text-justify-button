@@ -2,8 +2,8 @@
 Contributors: parallelit
 Tags: justify, mce, tiny mce, wysiwyg
 Requires at least: 4.7
-Tested up to: 5.5
-Stable tag: 0.1.4
+Tested up to: 7.1
+Stable tag: 0.1.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,6 +22,10 @@ This section describes how to install the plugin and get it working.
 3. That's all folks.
 
 == Changelog ==
+
+= 0.1.5 =
+* Add a direct-access guard (`ABSPATH` check) to the main plugin file, per WordPress.org plugin guidelines.
+* Test on WordPress 7.1; verified no warnings under PHP 8.2.
 
 = 0.1.4 =
 * Test on WordPress 5.5.
